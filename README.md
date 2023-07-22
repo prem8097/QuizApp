@@ -2,9 +2,36 @@
 
 ![Quizhost Logo](./web/img/quizhost-high-resolution-logo-color-on-transparent-background.png)
 
-## Description
+## Overview
 
-Quizhost is a web application that allows users to participate in quizzes and also host quizzes for their users. The application is developed using HTML, CSS, Bootstrap, Java Servlets, JSP, SQL, and PayPal SDK. It is built using the NetBeans IDE.
+Quizhost is an interactive web platform that brings the thrill of quizzes to your fingertips. Engage in a diverse selection of exciting quizzes on various topics, challenge your knowledge, and compete with others to claim the top spot on the leaderboard.Host your quizzes with ease, craft intriguing questions, and create a captivating quiz experience for your audience.
+
+Built using HTML, CSS, Bootstrap, Java Servlets, JSP, and MySQL, Quizhost ensures a smooth and intuitive user experience. Responsive design allows you to enjoy the excitement of quizzing across devices.
+
+Join Quizhost now and immerse yourself in a world of fun, learning, and healthy competition. Start your quizzing journey today! 🚀🏆
+
+## Features
+
+### Quiz Participation 🏆
+
+Dive into a wide range of exciting quizzes on various topics. Put your knowledge to the test and compete with others to claim the top spot on the leaderboard.
+
+### Quiz Hosting 🎯
+
+Take the reins as a quizmaster and create your quizzes. Craft intriguing questions, set the difficulty level, and delight your participants with a thrilling quiz experience.
+
+### Seamless Integration with PayPal 💳
+
+Secure and convenient payment processing with PayPal integration ensures smooth transactions for premium services of quiz hosting. Enjoy hassle-free payments for your quiz endeavors.
+
+## Key Technologies
+
+- **Frontend**: HTML, CSS, and Bootstrap - A visually appealing and responsive user interface that works seamlessly across devices.
+
+- **Backend**: Java Servlets and JSP - A robust backend powering the application's logic and handling user interactions.
+
+- **Database**: MySQL - A powerful and reliable database management system for storing quiz data and user information.
+  
 
 ## Prerequisites
 
@@ -21,12 +48,6 @@ Quizhost is a web application that allows users to participate in quizzes and al
   - checkout-sdk-2.0.0.jar
   - tomcat-servlet-api-9.0.76.jar
 
-## Features
-
-- Participate in quizzes on various topics.
-- Host quizzes and create questions for users to answer.
-- Seamless integration with PayPal for easy payment processing.
-- Developed using modern web technologies for a user-friendly experience.
 
 ## Getting Started
 
@@ -49,8 +70,13 @@ Contributions are welcome! If you find any issues or have suggestions for improv
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## About the Application
+## Website
 
-The Quizhost web application provides an interactive and engaging platform for hosting and participating in quizzes. With a user-friendly interface and robust backend using Java Servlets, the application aims to create a seamless quiz hosting experience for users of all ages and backgrounds.
+Visit our website: [Quizhost Online](http://quizhost.online)
 
-Happy quizzing! 🎉
+Explore a world of exciting quizzes and seamless hosting experience! Join now and embark on a quizzing adventure like never before.
+
+---
+
+*Quizhost: Your Gateway to Quizzing Adventure!* 🚀🌟
+
