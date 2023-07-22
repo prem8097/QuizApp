@@ -58,6 +58,19 @@ Secure and convenient payment processing with PayPal integration ensures smooth 
 3. Configure your MySQL database using XAMPP and create the necessary tables using phpMyAdmin.
 4. Deploy the application on a Tomcat 10.0.23 server.
 
+## Google Email Server Integration
+
+Quizhost leverages the powerful Google Email Server to send email notifications to users. The integration process involves the following steps:
+
+1. **Create a Google API Project**: Create a new project on the [Google Cloud Console] (https://console.cloud.google.com/) and enable the Gmail API for the project.
+
+2. **Generate API Credentials**: Generate API credentials (OAuth 2.0 client ID) for the project, specifying the appropriate OAuth consent screen settings.
+
+3. **Configure Email Sending**:  Use the OAuth 2.0 client ID and secret to authenticate the application.
+
+By integrating with the Google Email Server, Quizhost ensures reliable and secure email delivery to keep participants informed about their upcoming quizzes and provide them with their results and answers after the quiz has ended.
+
+
 ## Screenshots
 
 ![Screenshot 1](./web/img/qh1.png)
