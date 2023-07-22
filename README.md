@@ -31,7 +31,7 @@ Secure and convenient payment processing with PayPal integration ensures smooth 
 - **Backend**: Java Servlets and JSP - A robust backend powering the application's logic and handling user interactions.
 
 - **Database**: MySQL - A powerful and reliable database management system for storing quiz data and user information.
-- 
+  
 - **IDE**: NetBeans - A feature-rich integrated development environment used for the development of Quizhost.
   
 
