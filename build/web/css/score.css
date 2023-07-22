@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@1,500&family=Lato&display=swap');
+
+@media (orientation:landscape)
+{
+  #view-card
+{
+    height:auto;
+    width:50%;
+    border-radius:15px;
+    box-shadow: rgba(0, 164, 180, 0.35) 0px 15px 15px;
+    padding:40px 40px 40px 40px;
+    margin-left:22%;
+    margin-top:1%;
+}  
+#view-card2
+{
+    height:240px;
+    width:50%;
+    border-radius:15px;
+    box-shadow: rgba(0, 164, 180, 0.35) 0px 15px 15px;
+    padding:40px 40px 40px 40px;
+    margin-left:22%;
+    margin-top:1%;
+    text-align:center;
+}  
+}
+
+@media (orientation:portrait)
+{
+   #view-card
+{
+    height:auto;
+    width:80%;
+    border-radius:15px;
+    box-shadow: rgba(0, 164, 180, 0.35) 0px 15px 15px;
+    padding:35px 35px 35px 35px;
+    margin-left:10%;
+    margin-right:10%;
+    margin-top:11%;
+} 
+#view-card2
+{
+    height:430px;
+    width:80%;
+    border-radius:15px;
+    box-shadow: rgba(0, 164, 180, 0.35) 0px 15px 15px;
+    padding:35px 35px 35px 35px;
+    margin-left:10%;
+    margin-top:1%;
+    text-align:center;
+}  
+#exampleFormControlTextarea1
+{
+    width:90%;
+    
+    height:320px;
+    overflow:scroll;
+}
+}
+#home
+{
+    color:white;
+    text-decoration:none;
+}
+#home:hover
+{
+    text-decoration:none;
+    color:grey;
+}
+h5
+{
+    font-family: 'Lato', sans-serif;
+    font-size:18px;
+}
+#btnsubmit
+{
+    margin-top:10px;
+    width:115px;
+    height:40px;
+    border-radius:15px;
+    border-color:black;
+    border-width:0px;
+    color:white;
+    background-image:linear-gradient(to right,#00a4b4,#C2DFFF);
+    font-weight:bold;
+    font-size:18px;
+    font-family:'Inter Tight', sans-serif;
+    transition:width 0.5s,height 0.5s;   
+}
+#btnsubmit:hover
+{
+    width:130px;
+    height:55px;
+}
+#view
+{
+    text-align:right;
+    
+}

@@ -1,0 +1,18 @@
+#home
+{
+    color:white;
+    text-decoration:none;
+}
+#home:hover
+{
+    text-decoration:none;
+    color:grey;
+}
+#hov:hover
+{
+    color:grey;
+}
+.highlight {
+    background-color: green;
+    color: white;
+}

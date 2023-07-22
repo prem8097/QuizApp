@@ -1,0 +1,1391 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JEQNLFM1XB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JEQNLFM1XB');
+</script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta Content-Security-Policy-Report-Only: script-src https://accounts.google.com/gsi/client; frame-src https://accounts.google.com/gsi/; connect-src https://accounts.google.com/gsi/; />
+
+
+    <link  href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" rel="stylesheet">  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="css/pricing.css"/>
+    <link rel="stylesheet" href="css/nav.css"/>
+    
+    <link rel="stylesheet" href="css/hospital.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <meta name="google-signin-client_id" content="183281778297-tiaeccel88a2v0h0b2dp7ih0i74dkq05.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <title>Quizhost</title>
+  <style>
+  /* Center the content vertically and horizontally */
+  :root {
+      --primary: #06BBCC;
+      --light: #F0FBFC;
+      --dark: #181d38;
+  }
+  
+  
+  
+  
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  /* Overlay with dark background */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+
+  /* Popup styling */
+  .popup {
+    background-color: #f8f9fa;
+    padding: 30px 30px 30px 30px;
+    border-radius: 5px;
+    text-align: center;
+    width: 70%;
+    max-width: 400px;
+    cursor: auto;
+    animation: zoomIn 0.5s;
+  }
+
+  /* Popup heading styling */
+  .popup h1 {
+    font-size: 24px;
+    color: #333;
+  }
+
+  /* Popup card styling */
+  .popup .card {
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Popup card header styling */
+  .popup .card-header {
+    background-image: linear-gradient(to right, #00a4b4, #C2DFFF);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+  }
+
+  /* Popup card body styling */
+  .popup .card-body {
+    padding: 20px;
+  }
+  #popupHeading
+  {
+      color:black;
+  }
+
+  /* Zoom-in animation */
+  @keyframes zoomIn {
+    from {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  .g-signin2 {
+  display: inline-block;
+  margin-left:20px;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  
+  transition: background-color 0.3s ease;
+}
+
+.g-signin2:hover {
+  background-color: #3278E2;
+}
+
+.g-signin2:focus {
+  outline: none;
+  background-color: #3278E2;
+}
+
+.g-signin2:active {
+  background-color: #2457B3;
+}
+.navbar-brand img {
+  height: 28px; /* Adjust the height as needed */
+  width: auto; /* Maintain the aspect ratio */
+  margin: 5px; /* Optional: Add margin around the logo */
+}
+.carousel-item {
+  position: relative;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.carousel-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay color */
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease-in-out;
+}
+
+.carousel-caption h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.carousel-caption p {
+  font-size: 1.2rem;
+  margin-bottom: 0;
+}
+
+.carousel-item.active .carousel-caption {
+  opacity: 1; /* Show caption on active slide */
+}
+@media (max-width: 767px) {
+    #myCarousel .carousel-item {
+      height: 550px; /* Adjust the height as per your needs */
+      
+    }
+    #imgcoursel
+    {
+        height:550px;
+    }
+  }
+  @media (min-width: 767px) {
+    #myCarousel .carousel-item {
+      height: 800px; /* Adjust the height as per your needs */
+      
+    }
+    #imgcoursel
+    {
+        height:800px;
+    }
+    .carousel-caption {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+  padding: 20px;
+}
+  }
+  @keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+.carousel-caption h3,
+.carousel-caption p {
+  margin: 0;
+}
+
+
+
+.carousel-caption .animated {
+  animation: slideIn 1s ease-in-out;
+}
+
+.btnstrt
+{
+    background-color:rgb(6, 186, 203);
+    border:none;
+    border-radius:10px;
+    margin-top:40px;
+}
+
+.btnstrt:hover
+{
+    background-color: #059aa6;
+}
+
+
+.firsthead
+{
+    color:rgb(6, 186, 203);
+    
+}
+@media (max-width: 767px) {
+  /* Styles for screens with a maximum width of 767px (mobile devices) */
+  .carousel-caption {
+    text-align: center;
+    padding: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+
+  .carousel-caption h5 {
+    font-size: 18px;
+    line-height: 1.2;
+  }
+
+  .carousel-caption h1 {
+    font-size: 34px;
+    line-height: 1.2;
+  }
+
+  .carousel-caption .btn {
+    font-size: 16px;
+  }
+}
+.service-item {
+    margin-top:20px;
+    background: var(--light);
+    transition: .5s;
+}
+.service-item:hover {
+    margin-top: -10px;
+    background: var(--primary);
+}
+.service-item * {
+    transition: .5s;
+}
+.service-item:hover * {
+    color: var(--light) !important;
+}
+.fa-graduation-cap
+    {
+        color:rgb(6, 186, 203);
+    }
+ .fa-globe
+ {
+     color:rgb(6, 186, 203);
+ }  
+ .fa-home
+ {
+     color:rgb(6, 186, 203);
+ }   
+.fa-book-open
+{
+    color:rgb(6, 186, 203);
+}   
+.abt
+{
+    color:#06BBCC;
+}
+.abt1
+{
+    background-color:#06BBCC;
+    border:none;
+}
+.wow
+{
+    cursor: pointer;
+}
+.border-bottom
+{
+    text-decoration:none;
+    color:white;
+}
+.abtpara
+{
+    text-align:justify;
+}
+@media (max-width: 767px) {
+  .abt1 {
+    /* Set left and right margins to auto to center the button */
+    
+    margin: 0 auto;
+    display: block; 
+    width:60%;
+    height:auto;/* Optionally, change the display to block for full-width buttons */
+  }
+}
+.navbar .dropdown-toggle::after {
+    border: none;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    vertical-align:middle;
+    margin-left: 8px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    margin-right: 20px;
+    
+    
+    font-size: 15px;
+    text-transform: uppercase;
+    outline: none;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
+    color:#06BBCC ;
+}
+.colored-icon {
+      color: #06BBCC;
+    }
+    #spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+    color: #06BBCC;
+}
+
+#spinner.show {
+    transition: opacity .5s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
+</style>
+
+
+
+</head>
+<body>
+     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <nav  class="navbar navbar-expand-lg navbar-light bg-light sticky-top p-2">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">  
+                    <img src="img/quizhost-high-resolution-logo-color-on-transparent-background.png" alt="Logo">
+                </a>
+                <button type="button" class="navbar-toggler"  data-toggle="collapse" data-target="#mynavbar">
+                  <span class="navbar-toggler-icon" ></span>
+                </button>
+                <div id="mynavbar" class="collapse navbar-collapse justify-content-end" >
+                    <ul class="navbar-nav " >
+                        <li class="nav-item"><span class="nav-link" id="user-email"></span></li>
+                        
+                        <li class="nav-item" >
+                          <a href="index.html" class="nav-item nav-link active">Home</a>
+                        </li>
+                       <li class="nav-item">
+                          <a href="#" class="nav-link" data-toggle="modal" data-target="#myadmin-login">
+                            <i class="fas fa-sign-in-alt"></i>Admin
+                          </a>
+                        </li>
+                        <li class="nav-item" >
+                          <a href="#aboutus" class="nav-link scroll-to-section" >
+                            About
+                          </a>
+                        </li>
+                        
+                        <li class="nav-item" id="loginNavItem1">
+                          <a href="#" class="nav-link" data-toggle="modal" data-target="#my-signup">
+                            <i class="fas fa-user"></i>Signup
+                          </a>
+                        </li>
+                        
+                        <li class="nav-item" id="loginNavItem">
+                          <a href="#" class="nav-link" data-toggle="modal" data-target="#my-login" >
+                            <i class="fas fa-sign-in-alt"></i>Login
+                          </a>
+                        </li>
+                    </ul>
+                </div>
+              </div>
+    </nav>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Slides -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="img/learn0.jpg" alt="Image 1" id="imgcoursel">
+      <div class="carousel-caption">
+        <h5 class=" text-uppercase mb-3 animated slideInDown firsthead">Best Learning platform</h5>
+        <h1 class="display-5 text-white animated slideInDown secondhead">Challenge Your Knowledge, Engage with Quizzy</h1>
+        
+        <button  class="btn btn-primary btnstrt btn-lg" onclick="handleGetStarted()">Get started</button>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="img/host.jpg" alt="Image 2" id="imgcoursel">
+      <div class="carousel-caption">
+        <h5 class=" text-uppercase mb-3 animated slideInDown firsthead">Best Quiz hosting platform</h5>
+        <h1 class="display-5 text-white animated slideInDown">Host Your Quizzes with Confidence on QuizHost</h1>
+        <a href="#" class="btn btn-primary btnstrt btn-lg" data-toggle="modal" data-target="#myadmin-login" data-dismiss="modal">Get started</a>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="img/exam3.jpg" alt="Image 3" id="imgcoursel">
+      <div class="carousel-caption">
+        <h5 class="text-uppercase mb-3 animated slideInDown firsthead">Best Examination platform</h5>
+        <h1 class="display-5 text-white animated slideInDown">A simpler way to complete your exams on our platform</h1>
+        <a href="#" class="btn btn-primary btnstrt btn-lg" onclick="handleGetStarted()">Get started</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+    
+        <div class="modal fade" id="my-signup" role="dialog" >
+          <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">UserSignup with Quizhost</h5>
+                    <button id="modalcls" type="button" class="btn-close" aria-label="Close" data-dismiss="modal"><i class="fa fa-close"></i></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="input-group mb-3">
+                    <span class="input-group-text" ><i class="fab fa-r-project"></i></span>
+                    <input class="form-control"  name="register_no"    type="text" placeholder="Register Number" id="regno" required>
+                    </div> 
+                    <div class="input-group mb-3">
+                    <span class="input-group-text" ><i class="fas fa-user"></i></span>
+                    <input class="form-control"  name="full_name"    type="text" placeholder="Full Name" id="fname" required>
+                    </div>
+                    <div class="input-group mb-3">
+                    <span class="input-group-text"><i class="fas fa-phone"></i></span>
+                    <input name="phone" type="text" class="form-control" placeholder="Phone Number" id="lname" required>
+                    </div>
+                    <div class="input-group mb-3">
+                    <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                    <input name="email" type="email" class="form-control" placeholder="Email" id="email" required>
+                    </div>
+                    <div class="input-group mb-3">
+                    <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                    <input name="password" type="password" class="form-control" placeholder="Password" id="pass" required>
+                    </div>
+                    <div class="input-group mb-3">
+                    <span class="input-group-text"><i class="fas fa-university"></i></span>
+                    <input name="college_name" type="Text" class="form-control" placeholder="College Name" id="college" required>
+                    </div>
+                    <div class="d-flex">
+                    I'am a
+                    <div class=" form-check  offset-1 ">
+                      <input id="l1" type="radio" name="gender" class="form-check-input" value="Male">
+                      <label class="form-check-label" for="l1">Male</label>   
+                    </div>
+                    <div class="form-check offset-1">
+                      <input id="l2" type="radio" name="gender" class="form-check-input" value="Male">
+                      <label class="form-check-label" for="l2">      Female</label>   
+                    </div>   
+                    </div><br>
+                    <div class="d-grid gap-2">
+                    <button class="btn btn-primary btn-info btn-md " onclick="createAccount()">Create Account</button>
+                    
+                    </div>  
+                </div>
+                <div class="modal-footer justify-content-center">
+                Already have an account?
+                <a href="#" data-toggle="modal" data-target="#my-login" data-dismiss="modal">Login</a>
+                
+                </div>
+                </div>      
+            </div>
+        </div>
+   
+    
+      <div class="modal fade" id="my-login">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" >User Login with Quizhost</h5>
+              <button id="modalcls2" type="button" onclick="closeModal()" class="btn-close"><i class="fa fa-close"></i></button>
+            </div>
+            <div class="modal-body">
+              <div class="input-group mb-3">
+                <span class="input-group-text" ><i class="fas fa-user"></i></span>
+                <input id="useremail" name="email" class="form-control" type="email" placeholder="Email"  required/>
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text" ><i class="fas fa-lock"></i></span>
+                <input id="userpassword" name="password" class="form-control" type="password" placeholder="Password"  required/>
+              </div><br> 
+             <div class="d-grid">
+                  <button class="btn btn-primary btn-info btn-md" onclick="submitLogin()">Login</button>
+                  <a href="forgotpassword.jsp?param=user">Forgot password?</a>
+             </div><br> 
+            <div class="modal-footer justify-content-center">
+                <a  href="#"   data-toggle="modal" data-target="#my-signup" data-dismiss="modal" onclick="closeModal()">Click here</a>
+                to register a new account    
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+  
+    
+    <form action="adminOTP_verify" method="post">
+      <div class="modal fade" id="myadmin-signup">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" >Admin Signup with Quizhost</h5>
+              <button id="modalcls2" type="button" data-dismiss="modal" class="btn-close"><i class="fa fa-close"></i></button>
+            </div>
+            <div class="modal-body">
+                <div class="input-group mb-3">
+                <span class="input-group-text" ><i class="fas fa-user"></i></span>
+                <input name="adminname" class="form-control" type="text" placeholder="Name" required>
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text" ><i class="fas fa-user"></i></span>
+                <input name="adminemail" class="form-control" type="email" placeholder="Email" id="adminemail" required>
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text" ><i class="fas fa-lock"></i></span>
+                <input name="adminpassword" class="form-control" type="password" placeholder="Password" id=adminpassword" required>
+              </div><br> 
+             <div class="d-grid">
+                  <button class="btn btn-primary btn-info btn-md" type="submit" >create</button>
+                  
+             </div><br> 
+            <div class="modal-footer justify-content-center">
+                <a  href="#"   data-toggle="modal" data-target="#my-login" data-dismiss="modal">Click here</a>
+                for User login    
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </form>
+    
+    
+    
+    
+    
+    
+      <div class="modal fade" id="myadmin-login">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" >Admin Login with Quizhost</h5>
+              <button id="modalcls2" type="button" onclick="closeModal1()"  class="btn-close"><i class="fa fa-close"></i></button>
+            </div>
+            <div class="modal-body">
+                
+              <div class="input-group mb-3">
+                <span class="input-group-text" ><i class="fas fa-user"></i></span>
+                <input name="adminemail" class="form-control" type="email" placeholder="Email" id="adminemail1" required>
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text" ><i class="fas fa-lock"></i></span>
+                <input name="adminpassword" class="form-control" type="password" placeholder="Password" id="adminpassword" required>
+              </div><br>
+             <div class="d-grid">
+                  <button class="btn btn-info btn-primary btn-md" onclick="adminLogin()" >Login</button>
+                  <a href="forgotpassword.jsp?param=admin">Forgot password?</a>
+             </div><br>
+            <div class="modal-footer justify-content-center">
+                <a  href="#"data-toggle="modal" data-target="#myadmin-signup" data-dismiss="modal" onclick="closeModal1()" >Not an Admin?</a> Click here to proceed<br>    
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+ 
+    
+  
+  <!--<div id="popup" class="overlay">
+    <div class="popup">
+        <h5 id="popupHeading">Host your Quiz on our platform with reasonable prices</h5>
+        <div class="row mt-4 border-top">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>$1/month</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Basic Plan</p>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>$4/month</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Standard Plan</p>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>$8/month</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Premium Plan</p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>-->
+
+    <form method="post" action="PaymentServlet">
+      <div class="modal fade" id="myhost-login">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" >Host Quiz</h5>
+              <button id="modalcls2" type="button" data-dismiss="modal" class="btn-close"><i class="fa fa-close"></i></button>
+            </div>
+            <div class="modal-body">
+              <div class="input-group mb-3">
+                <span class="input-group-text" ><i class="fas fa-user"></i></span>
+                <input name="amount" class="form-control" type="hidden">
+              </div>
+             <div class="d-grid">
+                  <button class="btn-block btn-info" type="submit" value="Pay Now">Login</button>
+             </div><br>
+            <div class="modal-footer justify-content-center">
+                <a  href="hostPay.html">Not a Host?</a> Click here to proceed<br>    
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </form>
+    <br>
+    <div class="container-xxl py-5" >
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s" onclick="adminGetStarted()">
+                        <div class="service-item text-center pt-3">
+                            <div class="p-4">
+                                <i class="fas fa-chalkboard-teacher fa-3x mb-4 colored-icon"></i>
+                                <h5 class="mb-3">Host Quiz</h5>
+                                <p>Host quiz for your users in a much easier way with our platform</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s"  onclick="handleGetStarted()" >
+                        <div class="service-item text-center pt-3">
+                            <div class="p-4">
+                                <i class="fas fa-book fa-3x mb-4 colored-icon"></i>
+                                <h5 class="mb-3">Practice</h5>
+                                <p>Participate in the interactive quiz sessions hosted by our platform </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s" onclick="scheduleExam()">
+                        <div class="service-item text-center pt-3">
+                            <div class="p-4">
+                                <i class="fas fa-edit fa-3x mb-4 colored-icon"></i>
+                                <h5 class="mb-3">Exam</h5>
+                                <p>Join the quiz hosted by your administrator with a simple quizcode</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s" onclick="performanceAnalysis()">
+                        <div class="service-item text-center pt-3">
+                            <div class="p-4">
+                                <i class="fas fa-chart-bar fa-3x mb-4 colored-icon"></i>
+                                <h5 class="mb-3">Performance</h5>
+                                <p>Analyse your perforamce after every exam and view the answers</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+<div class="container-xxl py-5" id="aboutus">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="img-fluid position-absolute w-100 h-100" src="img/about.jpg" alt="" style="object-fit: cover;">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <h6 class="section-title bg-white text-start abt pe-3">About Us</h6>
+                    <h1 class="mb-4">Welcome to Quizhost</h1>
+                    <p class="mb-4 abtpara">We are thrilled to offer you the opportunity to host your quizzes and practice for exams with us! By participating in our hosted quizzes, you can enhance your knowledge, sharpen your skills, and gauge your performance in a simpler and more accessible manner. </p>
+                    <p class="mb-4 abtpara">In addition, we also provide you with the opportunity to host your own quizzes on our platform. You can create engaging and customized quizzes for your users, whether you are an educator, trainer, or simply someone who wants to share knowledge. Our platform offers robust features that enable you to design and tailor quizzes according to your specific requirements. </p>
+                    <div class="row gy-2 gx-4 mb-4">
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right abt me-2"></i>Quiz Hosting</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right abt me-2"></i>Practise</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right abt me-2"></i>Write Exam</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right abt me-2"></i>Performance analysis</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right abt me-2"></i>Learn</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right abt me-2"></i>Challenge friend</p>
+                        </div>
+                    </div>
+                    <a class="btn btn-primary py-3 px-5 mt-2 abt1" href="">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+ <main>
+                <section class="section-4">
+            <div class="section-4-1">
+                <div class="section-main">
+                    <h2>Flexible Plans for Everyone</h2>
+                    <p>Our plans are made for eveyone. Whether you are new to our platform, or have been on there for a long time, we have a plan that's right for you.</p>
+                </div>
+            </div>
+            <div class="section-4-2">
+                <div class="section-main">
+                    <div class="pricing-body">
+                        <div class="pricing-body-header">
+                            <div class="pricing-checkbox">
+                                
+                                
+                                
+                            </div>
+                        </div>
+                        <div class="pricing-body-plans">
+        
+                            <div class="active" id="pricing__monthly__plan">
+                                <div>
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h2 class="card-price">Free</h2>
+                                            <p>Perfect plan if you're just starting out.</p>
+                                        </div>
+                                        <div class="card-body">
+                                            <ul>
+                                                <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>Maximum 10 Quizes</p></li>
+                                                <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>No questions limit</p></li>
+                                                <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>Auto correction</p></li>
+                                                <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>No autoproctoring</p></li>
+                                            </ul>
+                                        </div>
+                                        <div class="card-footer">
+                                            <a href="#" data-toggle="modal" data-target="#myadmin-login">Get started</a>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h2 class="card-price">$4</h2>
+                                            <p>Perfect plan if you want to host frequently .</p>
+                                        </div>
+                                        <div class="card-body">
+                                            <ul>
+                                                <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>Maximum 30 Quizes</p></li>
+                                                <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>No question limit</p></li>
+                                                <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>Both Manuel & Auto correction</p></li>
+                                                <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>No autoproctoring </p></li>
+                                            </ul>
+                                        </div>
+                                        <div class="card-footer">
+                                            <a href="#"  onclick="payment('fourdollar')">Subscribe Now</a>
+
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h2 class="card-price"  >$8</h2>
+                                            <p>Perfect plan if you want to host proctored Quiz.</p>
+                                        </div>
+                                        <div class="card-body">
+                                            <ul>
+                                                <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>No Quiz Limit</p></li>
+                                                <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>No Questions Limit</p></li>
+                                                <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>Both Manuel & Auto correction</p></li>
+                                                <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>Auto proctoring</p></li>
+                                            </ul>
+                                        </div>
+                                        <div class="card-footer">
+                                            <a href="#" onclick="payment('fourdollar')">Subscribe Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="pricing__anually__plan">
+                                <div>
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h2 class="card-price">$50</h2>
+                                            <p>Perfect plan if you're just starting out.</p>
+                                        </div>
+                                        <div class="card-body">
+                                            <ul>
+                                                <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>Linkedin Integration</p></li>
+                                                <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>Twitter Integration</p></li>
+                                                <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>Real-time Analytics</p></li>
+                                            </ul>
+                                        </div>
+                                        <div class="card-footer">
+                                            <a href="#" data-toggle="modal" data-target="#myadmin-login">Subscribe Now</a>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h2 class="card-price">$140</h2>
+                                            <p>Perfect plan if you're a heavy user of social media.</p>
+                                        </div>
+                                        <div class="card-body">
+                                            <ul>
+                                                <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>Linkedin Integration</p></li>
+                                                <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>Twitter Integration</p></li>
+                                                <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>Instagram Integration</p></li>
+                                                <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>Real-time Analytics</p></li>
+                                            </ul>
+                                        </div>
+                                        <div class="card-footer">
+                                            <a href="#" data-toggle="modal" data-target="#myadmin-login">Subscribe Now</a>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h2 class="card-price">$70</h2>
+                                            <p>Perfect plan if you're just starting out.</p>
+                                        </div>
+                                        <div class="card-body">
+                                            <ul>
+                                                <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>Linkedin Integration</p></li>
+                                                <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>Twitter Integration</p></li>
+                                            </ul>
+                                        </div>
+                                        <div class="card-footer">
+                                            <a href="#" data-toggle="modal" data-target="#myadmin-login" >Subscribe Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>      
+ <footer>
+                <div class="row">
+                  <div class="col-md-4">
+                    <h5><b>Quizhost</b></h5><br>
+                    Trichy-Tanjore Road, Thirumalaisamudram,
+                    Thanjavur, Tamil Nadu 613401
+                    <br>
+                    +91-6305332926
+                    <br>
+                     Enquiry : +91-6305332926<br><br><br>
+                    <a href="https://www.instagram.com/premsai_devavarapu/" class="icn"><i class="fa fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/premsai_devavarapu/" class="icn"><i class="fa fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/premsai_devavarapu/" class="icn"><i class="fa fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/premsai_devavarapu/" class="icn"><i class="fa fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/premsai_devavarapu/" class="icn"><i class="fa fa-linkedin"></i></a><br>
+                  </div>
+                  <div class="col-md-4">
+                    <h5 id="kn"><b>Know Us</b></h5>
+                    <a href="#" class="know">Location and Directions</a><br>
+                    <a href="#" class="know">Queries</a><br>
+                   
+                    <a href="#" class="know">News and Media</a><br>
+                    <a href="#" class="know">About Us</a><br>
+                    
+                  </div>
+                  <div class="col-md-4">
+                    <h5 id="act"><b>Actions</b></h5>
+                    <a href="#" class="know">Contact Us</a><br>
+                    <a href="#" class="know">Tech News</a><br>
+                    
+                    <a href="#" class="know">Daily updates</a><br>
+                    <a href="#" class="know">Feedback</a><br>
+                    
+                  </div>
+      
+                </div>
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0 mt-5">
+                        &copy; <a class="border-bottom" href="#">Quizhost</a>, All Right Reserved.
+
+                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                        Designed By <a class="border-bottom" href="https://quizhost.online">Prem</a>
+                    </div>
+        
+        
+        </footer>
+ <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="successModalLabel">Payment Successful</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Your payment was successful.</p>
+            </div>
+        </div>
+    </div>
+</div>
+ <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
+     <div class="modal-dialog" role="document">
+         <div class="modal-content">
+             <div class="modal-header">
+                 <h5 class="modal-title" id="successModalLabel">Payment Successful</h5>
+                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                 </button>
+             </div>
+             <div class="modal-body">
+                 <p>Successfully logged in</p>
+             </div>
+         </div>
+     </div>
+ </div>
+ <div class="modal fade" id="alert" role="dialog">
+          <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Hey!!!</h5>
+                    <button id="modalcls" type="button" class="btn-close" aria-label="Close" data-dismiss="modal"><i class="fa fa-close"></i></button>
+                  </div>
+                  <div class="modal-body">
+                     Do you really want to log out?              
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <a href="logout">
+                    <button class="btn-primary lgout" name="Yes" value="Yes">Yes</button>
+                    </a>
+                    <button class="btn-primary btn-close lgout" data-dismiss="modal" name="No" value="No">No</button>
+             </div>
+              </div>         
+          </div>
+      </div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://kit.fontawesome.com/20c5629a29.js" crossorigin="anonymous"></script>
+    <!-- jQuery library -->
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+    
+    <script src="js/flickity.pkgd.min.js"></script>   
+    <script src="js/pricing.js"></script>
+    <script>
+  // Function to set a cookie with a given name and value
+  function setCookie(name, value) {
+    var date = new Date();
+    date.setTime(date.getTime() + (30 * 24 * 60 * 60 * 1000)); // Cookie expiration time (30 days)
+    var expires = "expires=" + date.toUTCString();
+    document.cookie = name + "=" + value + ";" + expires + ";path=/";
+  }
+
+  // Function to check if a cookie with a given name exists
+  function checkCookie(name) {
+    var cookies = document.cookie.split("; ");
+    for (var i = 0; i < cookies.length; i++) {
+      var cookie = cookies[i].split("=");
+      if (cookie[0] === name) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  // Show the pop-up after 4 seconds
+  
+  
+function onSignIn(googleUser) {
+            // This function will be called when the user signs in successfully
+            var profile = googleUser.getBasicProfile();
+            console.log('ID: ' + profile.getId()); // User ID
+            console.log('Name: ' + profile.getName()); // User name
+            console.log('Image URL: ' + profile.getImageUrl()); // User profile image URL
+            console.log('Email: ' + profile.getEmail()); // User email
+        }
+      function submitLogin() {
+          document.getElementById("spinner").classList.add("show");
+        var email = document.getElementById("useremail").value;
+        var password = document.getElementById("userpassword").value;
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "web6", true);
+        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhr.onreadystatechange = function() {
+          if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+              var response = JSON.parse(xhr.responseText);
+              if (response.success === "loginsuccess") {
+                  
+                  document.getElementById("spinner").classList.remove("show");
+                  //window.alert("Successfully logged in");
+                  var user=getCookie("user");
+                  //document.getElementById("user-email").textContent = user;
+                  
+                  closeModal();
+                  handleLoginLogout();
+                  var exampageCookie = getCookie("exam");
+                  var performanceCookie=getCookie("performance");
+                  var scheduleCookie=getCookie("schedule");
+          if (exampageCookie) {
+            // If the "exampage" cookie exists, redirect to exams.jsp page
+            window.location.href = "exams.jsp";
+          }
+          else if(performanceCookie)
+          {
+              window.location.href="CompletedExams.jsp";
+          }
+          else if(scheduleCookie)
+          {
+              window.location.href="ScheduledExams.jsp";
+          }
+          else
+          {
+              window.location.href="exams.jsp";
+          }
+          
+          
+                console.log("Successfully logged in");
+                
+              } else if (response.success === "loginfail") {
+                  document.getElementById("spinner").classList.remove("show");
+                  window.alert("Email or password incorrect");
+                  closeModal();
+                console.error("Username or Password incorrect");
+              }
+            } else {
+                document.getElementById("spinner").classList.remove("show");
+              console.error(xhr.status);
+            }
+          }
+        };
+        var params = "email=" + encodeURIComponent(email) + "&password=" + encodeURIComponent(password);
+        xhr.send(params);
+      }
+ 
+ function closeModal() {
+   var modal = document.getElementById("my-login");
+   modal.classList.remove("show");
+   modal.style.display = "none";
+   var modalBackdrop = document.getElementsByClassName("modal-backdrop")[0];
+   if (modalBackdrop) {
+     modalBackdrop.parentNode.removeChild(modalBackdrop);
+   }
+   document.body.classList.remove("modal-open");
+ } 
+   function closeModal1() {
+   var modal = document.getElementById("myadmin-login");
+   modal.classList.remove("show");
+   modal.style.display = "none";
+   var modalBackdrop = document.getElementsByClassName("modal-backdrop")[0];
+   if (modalBackdrop) {
+     modalBackdrop.parentNode.removeChild(modalBackdrop);
+   }
+   document.body.classList.remove("modal-open");
+ } 
+  function handleGetStarted() {
+    // Check if the user is logged in based on the presence of cookies
+    var email = getCookie("email");
+    if (email) {
+      // User is logged in, redirect to another JSP page
+      window.location.href = "exams.jsp";
+    } else {
+      // User is not logged in, show the login modal
+     var loginModal = document.getElementById("my-login");
+         loginModal.classList.add("show");
+      loginModal.style.display = "block";
+      document.cookie = "exam=exampage";
+      var modalBackdrop = document.createElement("div");
+    modalBackdrop.classList.add("modal-backdrop", "fade", "show");
+    document.body.appendChild(modalBackdrop);
+    modalBackdrop.addEventListener("click", closeModal);
+    }
+  }
+  // Function to get the value of a cookie by name
+  function getCookie(name) {
+    var cookieArr = document.cookie.split("; ");
+    for (var i = 0; i < cookieArr.length; i++) {
+      var cookiePair = cookieArr[i].split("=");
+      if (cookiePair[0] === name) {
+        return decodeURIComponent(cookiePair[1]);
+      }
+    }
+    return null;
+  }
+  
+  window.addEventListener("load", function() {
+    // Check if the email cookie exists
+    document.getElementById("spinner").classList.remove("show");
+    var email = getCookie("email");
+    if (email) {
+      // Update the text content of the element
+      handleLoginLogout();
+      var user=getCookie("user");
+      var loginNavItem1 = document.getElementById("loginNavItem1");
+      loginNavItem1.innerHTML = '<a href="#" class="nav-link" data-toggle="modal" data-target="#alert"><i class="fas fa-user"></i>'+user+'</a>';
+      //document.getElementById("user-email").textContent = user;
+    }
+  });
+function performanceAnalysis()
+{
+ var email = getCookie("email");
+    if (email) {
+      // User is logged in, redirect to another JSP page
+      window.location.href = "CompletedExams.jsp";
+    } else {
+      // User is not logged in, show the login modal
+     var loginModal = document.getElementById("my-login");
+         loginModal.classList.add("show");
+      loginModal.style.display = "block";
+      document.cookie='performance=perforamncepage';
+      var modalBackdrop = document.createElement("div");
+    modalBackdrop.classList.add("modal-backdrop", "fade", "show");
+    document.body.appendChild(modalBackdrop);
+    modalBackdrop.addEventListener("click", closeModal);
+    }   
+}
+function scheduleExam()
+{
+    var email = getCookie("email");
+    if (email) {
+      // User is logged in, redirect to another JSP page
+      window.location.href = "ScheduledExams.jsp";
+    } else {
+      // User is not logged in, show the login modal
+     var loginModal = document.getElementById("my-login");
+      loginModal.classList.add("show");
+      loginModal.style.display = "block";
+      document.cookie='schedule=schedulepage';
+      var modalBackdrop = document.createElement("div");
+    modalBackdrop.classList.add("modal-backdrop", "fade", "show");
+    document.body.appendChild(modalBackdrop);
+    modalBackdrop.addEventListener("click", closeModal);
+    }   
+}
+
+function adminGetStarted()
+{
+   var loginModal = document.getElementById("myadmin-login");
+      loginModal.classList.add("show");
+      loginModal.style.display = "block"; 
+      var modalBackdrop = document.createElement("div");
+    modalBackdrop.classList.add("modal-backdrop", "fade", "show");
+    document.body.appendChild(modalBackdrop);
+    modalBackdrop.addEventListener("click", closeModal1);
+}
+function handleLoginLogout() {
+    // Check if the user is logged in (you can use a flag or cookie for this)
+    var userLoggedIn = false; // Set this to true if the user is logged in
+    userLoggedIn=getCookie("email");
+    var user=getCookie("user");
+    if (userLoggedIn) {
+      // User is logged in, change the link text to "Logout"
+      var loginNavItem = document.getElementById("loginNavItem");
+      loginNavItem.innerHTML = '<a href="#" class="nav-link" data-toggle="modal" data-target="#alert">Logout</a>';
+      var loginNavItem1 = document.getElementById("loginNavItem1");
+      loginNavItem1.innerHTML = '<a href="#" class="nav-link" data-toggle="modal" data-target="#alert"><i class="fas fa-user"></i>'+user+'</a>';
+      
+    } else {
+      // User is not logged in, handle login functionality here
+      // For example, redirect to login page or show login modal
+    }
+  }
+  function smoothScrollToSection(event) {
+    event.preventDefault();
+
+    const targetSection = document.querySelector(event.target.getAttribute("href"));
+    const offsetTop = targetSection.getBoundingClientRect().top + window.pageYOffset;
+    const offset = 50; // You can adjust this value to control the scroll position
+
+    window.scroll({
+      top: offsetTop - offset,
+      behavior: "smooth"
+    });
+  }
+
+  // Attach the click event to the anchor link
+  const anchorLinks = document.querySelectorAll(".scroll-to-section");
+  anchorLinks.forEach(link => {
+    link.addEventListener("click", smoothScrollToSection);
+  });
+  
+  function payment(cost)
+  {
+      if(cost==="fourdollar")
+      {
+          window.location.href="hostPay.jsp?cost=" + cost;
+      }
+  }
+  function adminLogin()
+  {
+      document.getElementById("spinner").classList.add("show");
+      var email = document.getElementById('adminemail1').value;
+        var password = document.getElementById('adminpassword').value;
+        
+        const xhr =new XMLHttpRequest();
+    xhr.open('POST','adminlogin',true);
+    xhr.setRequestHeader('Content-type','application/x-www-form-urlencoded');
+    xhr.onreadystatechange = function() {
+          if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+              var response = JSON.parse(xhr.responseText);
+              if (response.success === "loginsuccess") {
+                  //window.alert("Successfully logged in");
+                  
+                  
+               document.getElementById("spinner").classList.remove("show");
+                window.location.href="admin.jsp";
+                console.log("Successfully logged in");
+                
+              } else if (response.success === "loginfail") {
+                  document.getElementById("spinner").classList.remove("show");
+                  window.alert("Email or password incorrect");
+                  
+                console.error("Username or Password incorrect");
+              }
+            } else {
+                document.getElementById("spinner").classList.remove("show");
+              console.error(xhr.status);
+              window.alert("Incorrect email or password");
+            }
+          }
+        };
+        var params = "email=" + encodeURIComponent(email) + "&password=" + encodeURIComponent(password);
+        xhr.send(params);
+      }
+      function createAccount() {
+          document.getElementById("spinner").classList.add("show");
+          
+  var registerNo = document.getElementById('regno').value;
+  var fullName = document.getElementById('fname').value;
+  var phone = document.getElementById('lname').value;
+  var email = document.getElementById('email').value;
+  var password = document.getElementById('pass').value;
+  var collegeName = document.getElementById('college').value;
+  var gender = document.querySelector('input[name="gender"]:checked').value;
+
+  var url = 'UserVerify' +
+    '?registerNo=' + encodeURIComponent(registerNo) +
+    '&fullName=' + encodeURIComponent(fullName) +
+    '&phone=' + encodeURIComponent(phone) +
+    '&email=' + encodeURIComponent(email) +
+    '&password=' + encodeURIComponent(password) +
+    '&collegeName=' + encodeURIComponent(collegeName) +
+    '&gender=' + encodeURIComponent(gender);
+
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST',url , true);
+  xhr.setRequestHeader('Content-Type', 'application/json');
+
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === XMLHttpRequest.DONE) {
+      if(xhr.readyState===4 && xhr.status===200)
+        {
+            document.getElementById("spinner").classList.remove("show");
+            window.location.href="otp.jsp";
+            
+        }
+        else if (xhr.readyState===4 && xhr.status===400)
+        {
+            document.getElementById("spinner").classList.remove("show");
+            window.location.href="index.html";
+            window.alert("Account already exists with this Email");
+        }
+    }
+  };
+
+  xhr.send();
+}
+
+</script>
+
+    </body>
+</html>  
+
+

@@ -1,0 +1,43 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : 09-Dec-2022, 5:14:27 pm
+    Author     : premsai devavarapu
+*/
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@1,500&family=Lato&display=swap');
+
+@media (orientation:landscape)
+{
+   .query-card
+{
+    height:auto;
+    width:50%;
+    border-radius:15px;
+    box-shadow: rgba(0, 164, 180, 0.35) 0px 15px 15px;
+    padding:40px 40px 40px 40px;
+    margin-left:22%;
+    margin-top:1%;
+    line-height:30px;
+    font-family: 'Lato', sans-serif;
+    overflow:scroll;
+} 
+
+}
+@media (orientation:portrait)
+{
+    .query-card
+    {
+    height:auto;
+    width:80%;
+    border-radius:15px;
+    box-shadow: rgba(0, 164, 180, 0.35) 0px 15px 15px;
+    padding:35px 35px 35px 35px;
+    margin-left:10%;
+    margin-right:10%;
+    margin-top:11%; 
+    overflow:scroll;
+    }
+    
+}

@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@1,500&family=Lato&display=swap');
+@media (orientation:landscape)
+{
+    body
+    {
+        display:flex;
+        flex-direction:column;
+    }
+    .container
+{
+    height:100px;
+    width:50%;
+    border-radius:15px;
+    box-shadow: rgba(0, 164, 180, 0.35) 0px 15px 15px;
+    padding:60px 60px 60px 60px;
+    margin-left:18%;
+    margin-top:18%;
+}
+#tick
+{
+    margin-right:20px;
+    width:120px;
+    height:70%;
+    float:left;
+}
+#header
+{
+    width:100%;
+    height:80%;
+}
+h2
+{
+    width:50%;
+    height:100%;
+    float:right;
+   font-family: 'Lato', sans-serif;
+}
+#btnsubmit
+{
+    margin-top:30px;
+    width:135px;
+    height:50px;
+    border-radius:15px;
+    border-color:black;
+    border-width:0px;
+    color:white;
+    background-image:linear-gradient(to right,#00a4b4,#C2DFFF);
+    font-weight:bold;
+    font-size:18px;
+    font-family:'Inter Tight', sans-serif;
+    transition:width 0.5s,height 0.5s;  
+}
+.btncont
+{
+    text-align:center;
+}
+#btnsubmit:hover
+{
+    width:150px;
+    height:65px;
+}
+}
+@media (orientation:portrait)
+{
+   .container
+{
+    height:auto;
+    width:60%;
+    border-radius:15px;
+    box-shadow: rgba(0, 164, 180, 0.35) 0px 15px 15px;
+    margin-top:100px;
+    margin-left:20px;
+    justify-content:center;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    padding-left:60px;
+    padding-top:30px;
+    padding-bottom:30px;
+    padding-right:60px;
+}
+#tick
+{
+    
+    width:80px;
+    height:50%;
+    /*float:left;*/
+    margin:auto;
+    margin-left:30%;
+}
+#header
+{
+    
+    width:100%;
+    height:100%;
+}
+h2
+{
+    font-family: 'Lato', sans-serif;
+}
+#btnsubmit
+{
+    
+    margin-top:30px;
+    width:135px;
+    height:50px;
+    border-radius:15px;
+    border-color:black;
+    border-width:0px;
+    color:white;
+    background-image:linear-gradient(to right,#00a4b4,#C2DFFF);
+    font-weight:bold;
+    font-size:18px;
+    font-family:'Inter Tight', sans-serif;
+    transition:width 0.5s,height 0.5s;  
+} 
+.btncont
+{
+    text-align:center;
+}
+#btnsubmit:hover
+{
+    width:150px;
+    height:65px;
+}
+}
+

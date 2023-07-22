@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@1,500&family=Lato&display=swap');
+.container
+{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    text-align:center;
+    margin-top:70px;
+}
+h3
+{
+font-family: 'Inter Tight', sans-serif;
+}
+label
+{
+   font-family: 'Inter Tight', sans-serif;
+   font-size:20px;
+   margin-left:10px;
+   margin-top:14px;
+}
+input[type=checkbox]
+{
+    width:17px;
+    height:17px;
+    margin-top:18px;
+}
+input[type=checkbox]:hover
+{
+    cursor:pointer;
+}
+#btn
+{
+    margin-top:40px;
+    border-radius:10px;
+    font-size:18px;
+    font-family: 'Inter Tight', sans-serif;
+    transition:width 0.5s,height 0.5s; 
+    text-align:center;
+}
+ .background-radial-gradient {
+  background-image: url("../img/edu4.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  box-shadow: inset 0 0 0 2000px rgba(28, 28, 28, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+   
+
+    .bg-glass {
+      /*background-color: hsla(0, 0%, 100%, 0.9) !important;*/
+      backdrop-filter: saturate(200%) blur(25px);
+    }
+    .btn
+    {
+        background-image:linear-gradient(to right,#00a4b4,#C2DFFF);
+         border-color:black;
+         border-width:0px;
+    }
+    #start
+{
+    margin-bottom:2px;
+    width:145px;
+    height:50px;
+    border-radius:15px;
+    border-color:black;
+    border-width:0px;
+    color:white;
+   background-color:rgb(21, 126, 126);
+    font-weight:bold;
+    font-size:17px;
+    font-family:'Inter Tight', sans-serif;
+    transition:width 0.5s,height 0.5s;   
+    margin-left:32%;
+}
+#start:hover
+{
+    width:150px;
+    height:65px;
+}
+

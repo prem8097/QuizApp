@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@1,500&family=Lato&display=swap');
+body
+{
+    margin-bottom:30px;
+}
+form
+{
+    padding:30px 30px 30px 70px;
+    display:inline;
+}
+h5
+{
+    font-family: 'Inter Tight', sans-serif;
+}
+.form-check-label
+{
+    font-family: 'Lato', sans-serif;
+}
+.question
+{
+    margin-top:0px;
+}
+.sub
+{
+    text-align:center;
+}
+#btnsubmit:hover
+{
+    background-color:white;
+    color:black;
+    border:solid 2px black;
+}
+.navigate
+{
+    width:60px;
+    height:500px;
+    background-color:black;
+    float:left;
+    overflow:scroll;
+}
+.question-form
+{
+    margin-left:40px;
+    line-height:35px;
+    margin-bottom:30px;
+}
+#q
+{
+    width:100%;
+    height:20px;
+    color:white;
+}
+#timer
+{
+    margin-right:30px;
+    color:white;
+    font-weight:bold;
+    font-size:25px;
+    font-family: 'Lato', sans-serif;
+}
+
+
+#btnsubmit
+{
+     width:130px;
+    height:60px;
+    border-radius:12px;
+    border-color:black;
+    border-width:0px;
+    color:white;
+    background-color:#06BBCC;
+    color:white;
+    font-weight:bold;
+    font-size:18px;
+    font-family:'Inter Tight', sans-serif;
+    transition:width 0.5s,height 0.5s;  
+}
+
+
+.cls
+{
+    margin-top:15px;
+    display:flex;
+    flex-direction:row;
+}
+input[type=radio]
+{
+    width:15px;
+    height:25px;
+    
+}
+input[type=radio]:hover
+{
+    cursor:pointer;
+}
+h1
+{
+    text-align:center;
+}
+input[type="radio"]:checked + label.correct-label {
+  color: green;
+}
+.expl
+{
+    background-color:rgb(21, 126, 126);
+    border:none;
+}
+.btn{
+    
+    
+    border-radius:12px;
+    border-color:black;
+    border-width:0px;
+    
+    
+    color:white;
+    
+    font-size:15px;
+    font-family:'Inter Tight', sans-serif;
+    transition:width 0.5s,height 0.5s;  
+}
+.btn:hover
+{
+    background-color:rgb(21, 126, 126);
+}
+.form-check-label
+{
+    margin-left:20px;
+}
+.card
+{
+    margin-bottom:20px;
+}
+input[type="button"] {
+      /* Set the background color */
+    width:70px;
+    height:40px;
+    border-radius:12px;
+    border-color:black;
+    border-width:0px;
+    color:white;
+    background-color:black;
+    color:white;
+    font-weight:bold;
+    font-size:18px;
+    font-family:'Inter Tight', sans-serif;
+    transition:width 0.5s,height 0.5s;  
+    }
+    
+    /* Add a hover effect */
+    input[type="button"]:hover {
+      background-color:white;
+    color:black;
+    border:solid 2px black;
+    }

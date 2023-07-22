@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@1,500&family=Lato&display=swap');
+body
+{
+    padding:50px 50px 50px 50px;
+}
+#form12
+{
+    width:200px;
+    display:flex;
+    justify-content: center;
+    margin-top:30px;
+}
+#l1
+{
+    font-weight:200;
+    font-family: 'Inter Tight', sans-serif;
+    font-size:20px;
+}
+#btnsub
+{
+    margin-top:40px;
+    background-color:rgb(21, 126, 126);
+}

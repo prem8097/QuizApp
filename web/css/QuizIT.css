@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@1,500&family=Lato&display=swap');
+body
+{
+    width:auto;
+    height:1080px;
+}
+#logo
+{
+    border-radius:25px;
+    height:20px;
+}
+.banner
+{
+    height:60%;
+    width:100%;
+    background-image: url("../img/edu4.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    box-shadow: inset 0 0 0 2000px #1c1c1c7a;
+    padding-top:100px;
+    
+}
+
+@media (orientation:portrait)
+{
+    .bounce {
+    width: 100%;
+    margin: 3rem auto;
+    display: inline-flex;
+    justify-content: center;
+    font-weight:bold;
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 75px;
+    color:white;
+    margin-bottom:10px;
+    -webkit-box-reflect: below -20px linear-gradient(transparent, #211e1e2e);
+}
+.bhead
+{
+    margin-top:60%;
+}
+    h1
+    {
+        padding-top:2%;
+    }
+    .banner-header
+{
+    text-align:center;  
+    padding-bottom:10px;
+}
+
+    .banner
+    {
+       padding-right:30px;
+       padding-left:30px; 
+    }
+    #start
+{
+    margin-bottom:2px;
+    width:145px;
+    height:50px;
+    border-radius:15px;
+    border-color:black;
+    border-width:0px;
+    color:white;
+    background-image:linear-gradient(to right,#00a4b4,#C2DFFF);
+    font-weight:bold;
+    font-size:17px;
+    font-family:'Inter Tight', sans-serif;
+    transition:width 0.5s,height 0.5s;     
+}
+#start:hover
+{
+    width:150px;
+    height:65px;
+}
+    
+}
+@media (orientation:landscape)
+{
+    .bounce {
+    
+    width: 100%;
+    margin: 3rem auto;
+    display: inline-flex;
+    justify-content: center;
+    font-weight:bold;
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 75px;
+    color:white;
+    -webkit-box-reflect: below -20px linear-gradient(transparent, #211e1e2e);
+}
+    .banner
+    {
+    padding-right:250px;
+    padding-left:250px;
+    }
+    
+    #start
+{
+    margin-top:30px;
+    width:175px;
+    height:50px;
+    border-radius:15px;
+    border-color:black;
+    border-width:0px;
+    color:white;
+    background-image:linear-gradient(to right,#00a4b4,#C2DFFF);
+    
+    font-weight:bold;
+    font-size:18px;
+    font-family:'Inter Tight', sans-serif;
+    transition:width 0.5s,height 0.5s;     
+}
+#start:hover
+{
+    width:150px;
+    height:65px;
+}
+.banner-header
+{
+    text-align:center;  
+}
+
+}
+
+
+.banner-quote
+{
+    font-family: 'Lato', sans-serif;
+    color:black;
+    margin-top:10px;
+    font-size:18px;
+    font-weight:900; 
+}
+h1
+{
+    font-size:100px;
+}
+
+#modalcls,#modalcls2
+{
+    width:50px;
+    height:30px;
+    border-width:0px;
+}
+
+.bounce {
+    font-size: 5rem;
+    width: 100%;
+    margin: 3rem auto;
+    display: inline-flex;
+    justify-content: center;
+    -webkit-box-reflect: below -20px linear-gradient(transparent, #211e1e2e);
+}
+.bounce span {
+    display: inline-flex;
+    animation: bounce 1s 2;
+}
+@keyframes bounce {
+    0%,
+    50%,
+    100% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-20px);
+    }
+}
+.ten span:nth-of-type(1) {
+    animation-delay: 0.1s;
+}
+.ten span:nth-of-type(2) {
+    animation-delay: 0.2s;
+}
+.ten span:nth-of-type(3) {
+    animation-delay: 0.3s;
+}
+.ten span:nth-of-type(4) {
+    animation-delay: 0.4s;
+}
+.ten span:nth-of-type(5) {
+    animation-delay: 0.5s;
+}
+.ten span:nth-of-type(6) {
+    animation-delay: 0.6s;
+}
+.navbar{
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  
+
+
+

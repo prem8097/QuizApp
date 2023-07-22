@@ -1,0 +1,39 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : 09-Dec-2022, 2:20:47 pm
+    Author     : premsai devavarapu
+*/
+.question-form
+{
+    padding:40px 40px 40px 40px;
+    line-height:26px;
+}
+.btn{
+    margin-top:20px;
+    margin-bottom:20px;
+    width:200px;
+    height:35px;
+    border-radius:12px;
+    border-color:black;
+    border-width:0px;
+    color:white;
+    background-color:#06BBCC;
+    color:white;
+    
+    font-size:15px;
+    font-family:'Inter Tight', sans-serif;
+    transition:width 0.5s,height 0.5s;  
+}
+
+.form-check-label
+{
+    margin-left:20px;
+}
+.card
+{
+    margin-bottom:20px;
+}
+

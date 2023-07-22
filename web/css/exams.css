@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@1,500&family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
+#user
+{
+    color:white;  
+}
+@media (orientation:landscape)
+{
+    
+    #user
+    {
+    text-align:center;
+    margin-right:100px;
+    margin-top:5px; 
+    } 
+}
+#container-exam
+{
+    padding:10px 50px 50px 50px;
+    display:flex;
+    flex-direction:row;
+     flex-wrap:wrap;
+     align-content:center;
+     justify-content:space-around;
+}
+.cn
+{
+    margin-top:30px;
+    width:340px;
+    height:410px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius:12px;
+   padding:15px 20px 10px 20px;
+   
+   transition: width 0.5s,height 0.5s;
+   font-family: 'Inter Tight', sans-serif;
+}
+.cn:hover
+{
+    width:360px;
+    height:400px;
+    cursor: pointer;
+}
+.examimg
+{
+    width:100%;
+    height:50%;
+    background-size:cover;
+    border-radius:12px;
+}
+#cnimg
+{
+    background-image:url("../img/dbms.png");
+}
+#osimg
+{
+    background-image:url("../img/os.jpg");
+}
+#aiimg
+{
+    background-image:url("../img/ai.png");
+}
+#pyimg
+{
+    background-image:url("../img/cn.jpg");
+}
+#tocimg
+{
+    background-image:url("../img/cloud.jpg");
+}
+#netimg
+{
+    background-image:url("../img/java.jpg");
+}
+#softimg
+{
+    background-image:url("../img/soft.jpg");
+}
+.exam-content
+{
+    margin-top:18px;
+    width:100%;
+    height:50%;
+    margin-left:10px;
+    /*padding:10px 10px 10px 10px;*/
+    padding:10px;
+}
+.exam-desc
+{
+    margin-top:8px;
+    color: #425466;
+    line-height: 24px;
+    text-align: justify;
+    
+}
+.cont
+{
+   text-decoration: none !important;
+   color:black;
+   
+}
+#timer,#timer1,#timer2
+{
+    margin-top:10px;
+    color:green;
+}
+@media (orientation:landscape)
+{
+     
+    #back
+    {
+    text-align:center;
+    margin-right:400px;
+    margin-top:5px; 
+    } 
+}
+h6
+{
+    margin-top:2px;
+    color:green;
+}
+h5
+{
+    color:#06BBCC;
+}
+
+
+#code
+{
+    background-color:#06BBCC;
+    transition: all 0.5s ease;
+    border:none;
+    
+}
+#code:hover
+{
+    transform: scale(1.15);
+}
+@media (Orientation:portrait)
+{
+    #code
+    {
+        margin-left:27%;
+        margin-top:15px;
+    }
+}
+
+#startExamBtn
+{
+    background-color:#06BBCC;
+    border:none;
+}
+#foot,#act,#kn
+{
+    color:white;
+}

@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@1,500&family=Lato&display=swap');
+.instructions
+{
+    margin-top:20px;
+    padding: 0px 45px 10px 25px;
+    font-family: 'Lato', sans-serif;
+    line-height:30px;
+}
+@media (Orientation:portrait)
+{
+    h1
+{
+     font-family: 'Inter Tight', sans-serif;
+    margin-top:-210px;
+    text-align:center;
+}
+}
+@media (Orientation:landscape)
+{
+    h1
+    {
+        font-family: 'Inter Tight', sans-serif;
+        text-align:center;
+        margin-top:10px;
+    }
+}
+#start
+{
+    margin-left:33%;
+}
+#str
+{
+    text-align:center;
+}
