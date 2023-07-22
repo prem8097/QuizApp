@@ -1,6 +1,6 @@
 # Quizhost - Quiz Hosting Web Application
 
-![Quizhost Logo](.web/img/quizhost-high-resolution-logo-color-on-transparent-background.png)
+![Quizhost Logo](./web/img/quizhost-high-resolution-logo-color-on-transparent-background.png)
 
 ## Description
 
