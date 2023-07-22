@@ -75,7 +75,11 @@ By integrating with the Google Email Server, Quizhost ensures reliable and secur
 
 ![Screenshot 1](./web/img/qh1.png)
 
-![Screenshot 2](./web/img/qh2.png)
+![Screenshot 2](./web/img/qh5.png)
+
+![Screenshot 2](./web/img/qh6.png)
+
+![Screenshot 2](./web/img/qh7.png)
 
 
 ## Contributing
