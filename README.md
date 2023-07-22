@@ -64,9 +64,6 @@ Secure and convenient payment processing with PayPal integration ensures smooth 
 
 ![Screenshot 2](./web/img/qh2.png)
 
-![Screenshot 3](./web/img/qh3.png)
-
-![Screenshot 4](./web/img/qh4.png)
 
 ## Contributing
 
