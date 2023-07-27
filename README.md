@@ -14,7 +14,7 @@ Join Quizhost now and immerse yourself in a world of fun, learning, and healthy 
 
 ### Quiz Participation 🏆
 
-Dive into a wide range of exciting quizzes on various topics. Put your knowledge to the test and compete with others to claim the top spot on the leaderboard.
+Dive into a wide range of exciting quizzes on various topics. Put your knowledge on the test and compete with others to claim the top spot on the leaderboard.
 
 ### Quiz Hosting 🎯
 
