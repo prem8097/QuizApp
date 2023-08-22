@@ -95,7 +95,7 @@
                 </div>
               </div>
     </nav>
-  <!-- Your HTML content for the interview preparation page -->
+  <!-- Your HTML content for the interview preparation page display it here-->
   <div class="container mt-4">
     <!-- Loop through the fetched questions and explanations -->
     <div id="questions">
