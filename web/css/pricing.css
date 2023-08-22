@@ -17,7 +17,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this t
 
 body {
     width: 100%;
-    height: auto;
+    
 }
 
 
@@ -417,3 +417,21 @@ main .section-4 .section-4-2 .section-main div.pricing-body .pricing-body-plans>
         height: fit-content;
     }
 }
+.price
+    {
+        border:none;
+        height:35px;
+        width:150px;
+        border-radius:5px;
+        font-size: 15px;
+    }
+    .price1
+    {
+         border:none;
+        height:35px;
+        width:150px;
+        border-radius:5px;
+        font-size: 15px;
+        color:white;
+       background-image:linear-gradient(to right,#00a4b4,#C2DFFF);
+    }

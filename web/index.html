@@ -23,7 +23,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
+
     <link rel="stylesheet" href="css/pricing.css"/>
     <link rel="stylesheet" href="css/nav.css"/>
     
@@ -34,6 +34,7 @@
     <title>Quizhost</title>
   <style>
   /* Center the content vertically and horizontally */
+
   :root {
       --primary: #06BBCC;
       --light: #F0FBFC;
@@ -392,6 +393,40 @@
     visibility: visible;
     opacity: 1;
 }
+/*#branchDropdown,#topicDropdown
+{
+    font-family: "Font Awesome 5 Free";
+    border:none;
+    color:rgb(6, 186, 203);
+}*/
+/* Custom CSS styles */
+    .form-select {
+      width: 100%;
+      padding: 0.375rem 1.75rem 0.375rem 0.75rem;
+      font-size: 1rem;
+      line-height: 1.5;
+      border: 2px solid #ced4da;
+      border-radius: 0.25rem;
+      transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+    
+    .form-select:focus {
+      border-color: #06BBCC;
+      outline: 0;
+      box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+    }
+
+    .form-select:hover {
+      border-color: #06BBCC;
+    }
+
+    .form-select[multiple] {
+      height: auto;
+    }
+
+    .form-select option:hover {
+      background-color: #06BBCC;
+    }
 </style>
 
 
@@ -763,6 +798,206 @@
             </div>
         </div>
 
+    
+      <div class="container-xxl " id="aboutus">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="img-fluid position-absolute w-100 h-100" src="img/interview3.jpg" alt="" style="object-fit: cover;">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp"  data-wow-delay="0.3s">
+                    <h6 class="section-title bg-white text-start abt pe-3">Prepare</h6>
+                    <h1 class="mb-4">Are You Preparing for an Interview?</h1>
+                    <p class="mb-4 abtpara">Select the highlighted topics from your resume, and witness a transformation in your interview preparation. We provide a  handpicked set of interview questions, aligning perfectly with the skills you've showcased</p>
+                    <p class="mb-4 abtpara">Take the reins of your career advancement today – explore our dynamic selection process and empower yourself for those critical interviews!</p>
+                   <div class="container mt-5">
+  <div class="container mt-5">
+  <div class="row">
+      
+    <div class="col">
+      <select id="branchDropdown" class="form-select mb-3" onchange="loadTopics(this.value)">
+          <option value="">Branch</option>
+        <option value="cse">CSE</option>
+        <option value="ece">ECE</option>
+      </select>
+    </div>
+      
+      
+    <div class="col">
+      <select id="topicDropdown" class="form-select mb-3"   multiple onchange="addSelectedTopic()">
+        <option value="" disabled selected>Topic</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+                    <div id="selectedTopics" class="row gy-2 gx-4 mb-4">
+                        <!--<div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right abt me-2"></i>Quiz Hosting</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right abt me-2"></i>Practise</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right abt me-2"></i>Write Exam</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right abt me-2"></i>Performance analysis</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right abt me-2"></i>Learn</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p class="mb-0"><i class="fa fa-arrow-right abt me-2"></i>Challenge friend</p>
+                        </div>-->
+                    </div>
+                    <a class="btn btn-primary py-3 px-5 mt-2 abt1"  onclick="getQuestions()">Get Questions</a>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+
+
+    
+ <main>
+                <section class="section-4">
+            <div class="section-4-1">
+                <div class="section-main">
+                    <h2>Flexible Plans for Everyone</h2>
+                    <p>Our plans are made for eveyone. Whether you are new to our platform, or have been on there for a long time, we have a plan that's right for you.</p>
+                </div>
+            </div>
+            <div class="section-4-2">
+                <div class="section-main">
+                    <div class="pricing-body">
+                        <div class="pricing-body-header">
+                            <div class="pricing-checkbox">
+                                
+                                
+                                
+                            </div>
+                        </div>
+                        <div class="pricing-body-plans">
+        
+                            <div class="active" id="pricing__monthly__plan">
+                                <div>
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h2 class="card-price">Free</h2>
+                                            <p>Perfect plan if you're just starting out.</p>
+                                        </div>
+                                        <div class="card-body">
+                                            <ul>
+                                                <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>Maximum 10 Quizes</p></li>
+                                                <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>No questions limit</p></li>
+                                                <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>Auto correction</p></li>
+                                                <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>No autoproctoring</p></li>
+                                            </ul>
+                                        </div>
+                                        <div class="card-footer">
+                                            <a href data-toggle="modal" data-target="#myadmin-login">Get started</a>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h2 class="card-price">$4</h2>
+                                            <p>Perfect plan if you want to host frequently .</p>
+                                        </div>
+                                        <div class="card-body">
+                                            <ul>
+                                                <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>Maximum 30 Quizes</p></li>
+                                                <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>No question limit</p></li>
+                                                <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>Both Manuel & Auto correction</p></li>
+                                                <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>No autoproctoring </p></li>
+                                            </ul>
+                                        </div>
+                                        <div class="card-footer">
+                                            <button  class="price" onclick="payment('fourdollar')">Subscribe Now</button>
+
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h2 class="card-price"  >$8</h2>
+                                            <p>Perfect plan if you want to host proctored Quiz.</p>
+                                        </div>
+                                        <div class="card-body">
+                                            <ul>
+                                                <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>No Quiz Limit</p></li>
+                                                <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>No Questions Limit</p></li>
+                                                <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>Both Manuel & Auto correction</p></li>
+                                                <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>Auto proctoring</p></li>
+                                            </ul>
+                                        </div>
+                                        <div class="card-footer">
+                                            <button class="price1" onclick="payment('fourdollar')">Subscribe Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="pricing__anually__plan">
+                                <div>
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h2 class="card-price">$50</h2>
+                                            <p>Perfect plan if you're just starting out.</p>
+                                        </div>
+                                        <div class="card-body">
+                                            <ul>
+                                                <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>Linkedin Integration</p></li>
+                                                <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>Twitter Integration</p></li>
+                                                <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>Real-time Analytics</p></li>
+                                            </ul>
+                                        </div>
+                                        <div class="card-footer">
+                                           <button class="price" onclick="payment('fourdollar')">Subscribe Now</button>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h2 class="card-price">$140</h2>
+                                            <p>Perfect plan if you're a heavy user of social media.</p>
+                                        </div>
+                                        <div class="card-body">
+                                            <ul>
+                                                <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>Linkedin Integration</p></li>
+                                                <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>Twitter Integration</p></li>
+                                                <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>Instagram Integration</p></li>
+                                                <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>Real-time Analytics</p></li>
+                                            </ul>
+                                        </div>
+                                        <div class="card-footer">
+                                            <button class="price" onclick="payment('fourdollar')">Subscribe Now</button>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h2 class="card-price">$70</h2>
+                                            <p>Perfect plan if you're just starting out.</p>
+                                        </div>
+                                        <div class="card-body">
+                                            <ul>
+                                                <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>Linkedin Integration</p></li>
+                                                <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>Twitter Integration</p></li>
+                                            </ul>
+                                        </div>
+                                        <div class="card-footer">
+                                            <button class="price" onclick="payment('fourdollar')">Subscribe Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>  
 
 <div class="container-xxl py-5" id="aboutus">
         <div class="container">
@@ -802,144 +1037,7 @@
             </div>
         </div>
     </div>
-
     
- <main>
-                <section class="section-4">
-            <div class="section-4-1">
-                <div class="section-main">
-                    <h2>Flexible Plans for Everyone</h2>
-                    <p>Our plans are made for eveyone. Whether you are new to our platform, or have been on there for a long time, we have a plan that's right for you.</p>
-                </div>
-            </div>
-            <div class="section-4-2">
-                <div class="section-main">
-                    <div class="pricing-body">
-                        <div class="pricing-body-header">
-                            <div class="pricing-checkbox">
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="pricing-body-plans">
-        
-                            <div class="active" id="pricing__monthly__plan">
-                                <div>
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <h2 class="card-price">Free</h2>
-                                            <p>Perfect plan if you're just starting out.</p>
-                                        </div>
-                                        <div class="card-body">
-                                            <ul>
-                                                <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>Maximum 10 Quizes</p></li>
-                                                <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>No questions limit</p></li>
-                                                <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>Auto correction</p></li>
-                                                <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>No autoproctoring</p></li>
-                                            </ul>
-                                        </div>
-                                        <div class="card-footer">
-                                            <a href="#" data-toggle="modal" data-target="#myadmin-login">Get started</a>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <h2 class="card-price">$4</h2>
-                                            <p>Perfect plan if you want to host frequently .</p>
-                                        </div>
-                                        <div class="card-body">
-                                            <ul>
-                                                <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>Maximum 30 Quizes</p></li>
-                                                <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>No question limit</p></li>
-                                                <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>Both Manuel & Auto correction</p></li>
-                                                <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>No autoproctoring </p></li>
-                                            </ul>
-                                        </div>
-                                        <div class="card-footer">
-                                            <a href="#"  onclick="payment('fourdollar')">Subscribe Now</a>
-
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <h2 class="card-price"  >$8</h2>
-                                            <p>Perfect plan if you want to host proctored Quiz.</p>
-                                        </div>
-                                        <div class="card-body">
-                                            <ul>
-                                                <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>No Quiz Limit</p></li>
-                                                <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>No Questions Limit</p></li>
-                                                <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>Both Manuel & Auto correction</p></li>
-                                                <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>Auto proctoring</p></li>
-                                            </ul>
-                                        </div>
-                                        <div class="card-footer">
-                                            <a href="#" onclick="payment('fourdollar')">Subscribe Now</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="pricing__anually__plan">
-                                <div>
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <h2 class="card-price">$50</h2>
-                                            <p>Perfect plan if you're just starting out.</p>
-                                        </div>
-                                        <div class="card-body">
-                                            <ul>
-                                                <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>Linkedin Integration</p></li>
-                                                <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>Twitter Integration</p></li>
-                                                <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>Real-time Analytics</p></li>
-                                            </ul>
-                                        </div>
-                                        <div class="card-footer">
-                                            <a href="#" data-toggle="modal" data-target="#myadmin-login">Subscribe Now</a>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <h2 class="card-price">$140</h2>
-                                            <p>Perfect plan if you're a heavy user of social media.</p>
-                                        </div>
-                                        <div class="card-body">
-                                            <ul>
-                                                <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>Linkedin Integration</p></li>
-                                                <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>Twitter Integration</p></li>
-                                                <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>Instagram Integration</p></li>
-                                                <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>Real-time Analytics</p></li>
-                                            </ul>
-                                        </div>
-                                        <div class="card-footer">
-                                            <a href="#" data-toggle="modal" data-target="#myadmin-login">Subscribe Now</a>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <h2 class="card-price">$70</h2>
-                                            <p>Perfect plan if you're just starting out.</p>
-                                        </div>
-                                        <div class="card-body">
-                                            <ul>
-                                                <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>Linkedin Integration</p></li>
-                                                <li><img src="https://rvs-product-pricing-page.vercel.app/assets/Checkmark.svg" alt=""><p>Twitter Integration</p></li>
-                                            </ul>
-                                        </div>
-                                        <div class="card-footer">
-                                            <a href="#" data-toggle="modal" data-target="#myadmin-login" >Subscribe Now</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-        
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-    </main>      
  <footer>
                 <div class="row">
                   <div class="col-md-4">
@@ -961,16 +1059,16 @@
                     <a href="#" class="know">Location and Directions</a><br>
                     <a href="#" class="know">Queries</a><br>
                    
-                    <a href="#" class="know">News and Media</a><br>
+                    <a href="https://www.gadgetsnow.com/tech-news" class="know">News and Media</a><br>
                     <a href="#" class="know">About Us</a><br>
                     
                   </div>
                   <div class="col-md-4">
                     <h5 id="act"><b>Actions</b></h5>
-                    <a href="#" class="know">Contact Us</a><br>
-                    <a href="#" class="know">Tech News</a><br>
+                    <a href="https://www.instagram.com/premsai_devavarapu/" class="know">Contact Us</a><br>
+                    <a href="https://www.gadgetsnow.com/tech-news" class="know">Tech News</a><br>
                     
-                    <a href="#" class="know">Daily updates</a><br>
+                    <a href="https://www.theverge.com/tech" class="know">Daily updates</a><br>
                     <a href="#" class="know">Feedback</a><br>
                     
                   </div>
@@ -980,11 +1078,10 @@
                         &copy; <a class="border-bottom" href="#">Quizhost</a>, All Right Reserved.
 
                         <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                        Designed By <a class="border-bottom" href="https://quizhost.online">Prem</a>
+                        Designed By <a class="border-bottom" href="www.quizhost.online">Prem</a>
                     </div>
-        
-        
         </footer>
+          <div class="end"></div>
  <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -1047,11 +1144,11 @@
  
  
  
- 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
     <script src="https://kit.fontawesome.com/20c5629a29.js" crossorigin="anonymous"></script>
     <!-- jQuery library -->
     
@@ -1383,6 +1480,112 @@ function handleLoginLogout() {
 
   xhr.send();
 }
+var selectedTopics = [];
+var cseTopics=[];
+var eceTopics=[];
+var branchId;
+  function loadTopics(branch) {
+    const topicDropdown = document.getElementById("topicDropdown");
+    const selectedTopicsDiv = document.getElementById("selectedTopics");
+    selectedTopics.length = 0; // Clear the selected topics array
+    selectedTopicsDiv.innerHTML = ''; // Clear the selected topics div
+
+    
+
+    if (branch === "cse") {
+      branchId = 1;
+    } else if (branch === "ece") {
+      branchId = 2;
+    }
+
+    if (branchId !== undefined) {
+      const apiUrl = `https://qmanage.online/api/topics?branchId=${branchId}`;
+      const xhr = new XMLHttpRequest();
+
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+          if (xhr.status === 200) {
+            const topics = JSON.parse(xhr.responseText);
+            topicDropdown.innerHTML = ''; // Clear the dropdown options
+
+            topics.forEach(function (topic) {
+                
+              const option = document.createElement("option");
+              option.value = topic.id;
+              option.text = topic.name;
+              topicDropdown.appendChild(option);
+            });
+          } else {
+            console.error("Error:", xhr.statusText);
+          }
+        }
+      };
+
+      xhr.open("GET", apiUrl, true);
+      xhr.send();
+    } else {
+      topicDropdown.innerHTML = ''; // Clear the dropdown options
+    }
+  }
+
+  function addSelectedTopic() {
+      
+    const topicDropdown = document.getElementById("topicDropdown");
+    const selectedTopicsDiv = document.getElementById("selectedTopics");
+
+    for (const option of topicDropdown.options) {
+      if (option.selected && selectedTopics.indexOf(option.value) === -1) {
+        selectedTopics.push(option.value);
+
+        const topicName = option.text;
+        const topicElement = document.createElement("div");
+        topicElement.className = "col-sm-6";
+        topicElement.innerHTML = `
+          <p class="mb-0"><i class="fa fa-close abt me-2" onclick="deleteTopics('${option.value}')"></i>${topicName}</p>
+        `;
+
+        selectedTopicsDiv.appendChild(topicElement);
+      }
+    }
+    console.log(selectedTopics);
+  }
+function deleteTopics(topicId)
+{
+    console.log(topicId);
+    selectedTopics = selectedTopics.filter(number => number !== topicId);
+    console.log(selectedTopics);
+    const selectedTopicsDiv = document.getElementById("selectedTopics");
+    const pElements = selectedTopicsDiv.querySelectorAll("p");
+    
+    for (const pElement of pElements) {
+        const icon = pElement.querySelector("i");
+        if (icon && icon.getAttribute("onclick") === `deleteTopics('${topicId}')`) {
+            pElement.remove();
+            break; // Stop after the first match is removed
+        }
+    }
+}
+function getQuestions() {
+ if(selectedTopics.length===0)
+ {
+     window.alert("please the Topics");
+ }
+ else
+ {
+     const topicIdsString = selectedTopics.join(',');
+    // Construct the query parameter string
+    const queryString = `branchId=${branchId}&selectedTopics=${topicIdsString}`;
+  
+    // Redirect to the interviewPrep.jsp page with the query parameter
+    window.location.href = `interviewPrep.jsp?${queryString}`;
+ }
+  
+}
+
+
+
+
+
 
 </script>
 

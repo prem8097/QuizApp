@@ -188,7 +188,7 @@ function submitOTP()
 {
 var otp = document.getElementById("exampleInput").value;
         
-        
+     console.log(otp);   
         const xhr =new XMLHttpRequest();
     xhr.open('POST','VerifyCode',true);
     xhr.setRequestHeader('Content-type','application/x-www-form-urlencoded');
@@ -260,7 +260,7 @@ var otp = document.getElementById("exampleInput").value;
  window.onload = function() {
     // Start the timer when the page is loaded
     startTimer(180);
-    window.alert(sessionStorage.getItem("phone"));
+    //window.alert(sessionStorage.getItem("phone"));
   };
 
 

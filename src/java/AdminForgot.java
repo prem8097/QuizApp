@@ -9,6 +9,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import at.favre.lib.crypto.bcrypt.BCrypt;
 
 public class AdminForgot extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
@@ -26,8 +27,8 @@ public class AdminForgot extends HttpServlet {
         
         Connection con=null;
         String email=request.getParameter("email");
-        String password=request.getParameter("password");
-        
+        //String password=request.getParameter("password");
+        String hashedPassword = hashPassword(request.getParameter("password"));
         try{
             Class.forName("com.mysql.jdbc.Driver");
             con=DriverManager.getConnection("jdbc:mysql://localhost/quizit","root","prem8097");
@@ -36,7 +37,7 @@ public class AdminForgot extends HttpServlet {
 PreparedStatement pstmt = con.prepareStatement(insertQuery);
 
 // Set the parameter values
-pstmt.setString(1, password);
+pstmt.setString(1, hashedPassword);
 pstmt.setString(2, email);
 
             int rowsUpdated = pstmt.executeUpdate();
@@ -60,5 +61,8 @@ pstmt.setString(2, email);
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
+    private String hashPassword(String plainPassword) {
+        return BCrypt.withDefaults().hashToString(12, plainPassword.toCharArray());
+    }
 
 }

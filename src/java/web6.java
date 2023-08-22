@@ -13,7 +13,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import java.sql.*;
 import org.json.JSONObject;
-
+import at.favre.lib.crypto.bcrypt.BCrypt;
 /**
  *
  * @author premsai devavarapu
@@ -59,9 +59,9 @@ public class web6 extends HttpServlet {
             Class.forName("com.mysql.jdbc.Driver");
             con=DriverManager.getConnection("jdbc:mysql://localhost/quizit","root","prem8097");
             
-            PreparedStatement pstmt = con.prepareStatement("Select Register_Number,name,email,password from user_details where email=? and password=?");
+            PreparedStatement pstmt = con.prepareStatement("Select Register_Number,name,email,password from user_details where email=?");
             pstmt.setString(1, email);
-            pstmt.setString(2, pass);
+            
             //pstmt.setString(3,username);
             ResultSet rs = pstmt.executeQuery();
             
@@ -69,11 +69,19 @@ public class web6 extends HttpServlet {
             {
             //out.print("You are successfully loggedin..."+ "Hello"+  email);
               //request.getRequestDispatcher("Welcome").include(request, response);
+                if(verifyPassword(pass,rs.getString("password")))
+                {
+                    jsonResponse.put("success","loginsuccess");
+                }
+                else
+                {
+                    jsonResponse.put("success","loginfail");
+                }
                session.setAttribute("email",email);
                session.setAttribute("password", pass);
                session.setAttribute("user", rs.getString(2));
                session.setAttribute("regno",rs.getString(1));
-               jsonResponse.put("success","loginsuccess");
+               
             Cookie emailCookie = new Cookie("email", email);
             Cookie passwordCookie = new Cookie("password", pass);
             Cookie userCookie = new Cookie("user", rs.getString(2));
@@ -103,9 +111,8 @@ public class web6 extends HttpServlet {
     }
 
     
-    @Override
-    public String getServletInfo() {
-        return "Short description";
-    }// </editor-fold>
+   private boolean verifyPassword(String plainPassword, String hashedPassword) {
+        return BCrypt.verifyer().verify(plainPassword.toCharArray(), hashedPassword).verified;
+    }
 
 }

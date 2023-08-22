@@ -322,7 +322,7 @@ function sendDynamicHTML(quizName,numQuestions,dynamicHTML,dynamicHTML1,quizDesc
         if(xhr.readyState===4 && xhr.status===200)
         {
             console.log(xhr.responseText);
-            window.alert("Added successfully");
+            //window.alert("Added successfully");
         }
     };
     const params='quizName=' + encodeURIComponent(quizName) + '&numQuestions=' + encodeURIComponent(numQuestions) + '&dynamicHTML=' + encodeURIComponent(dynamicHTML) +  '&dynamicHTML1=' + encodeURIComponent(dynamicHTML1)+ '&quizDescription=' + encodeURIComponent(quizDescription)+'&randomString=' + encodeURIComponent(randomString)+'&dateTaken=' + encodeURIComponent(dateTaken)+'&timeTaken=' + encodeURIComponent(timeTaken)+'&duration=' + encodeURIComponent(duration)+'&endTime=' + encodeURIComponent(endTime)+'&endDate=' + encodeURIComponent(endDate);

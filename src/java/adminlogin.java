@@ -8,6 +8,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import java.sql.*;
 import org.json.JSONObject;
+import at.favre.lib.crypto.bcrypt.BCrypt;
 
 public class adminlogin extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
@@ -32,13 +33,20 @@ public class adminlogin extends HttpServlet {
         try{
             Class.forName("com.mysql.jdbc.Driver");
             con=DriverManager.getConnection("jdbc:mysql://localhost/quizit","root","prem8097");
-            PreparedStatement pstmt = con.prepareStatement("Select name,email,password,subscription,end_date from admin_details where email=? and password=?");
+            PreparedStatement pstmt = con.prepareStatement("Select name,email,password,subscription,end_date from admin_details where email=?");
             pstmt.setString(1, email);
-            pstmt.setString(2, pass);
+            
             ResultSet rs = pstmt.executeQuery();
             if (rs.next()) 
             {
-               
+               if(verifyPassword(pass,rs.getString("password")))
+                {
+                    jsonResponse.put("success","loginsuccess");
+                }
+                else
+                {
+                    jsonResponse.put("success","loginfail");
+                }
                session.setAttribute("email",email);
                session.setAttribute("name", rs.getString(1));
                 jsonResponse.put("success","loginsuccess");
@@ -67,9 +75,8 @@ public class adminlogin extends HttpServlet {
         
         out.flush();
     }
-    @Override
-    public String getServletInfo() {
-        return "Short description";
-    }// </editor-fold>
+    private boolean verifyPassword(String plainPassword, String hashedPassword) {
+        return BCrypt.verifyer().verify(plainPassword.toCharArray(), hashedPassword).verified;
+    }
 
 }
