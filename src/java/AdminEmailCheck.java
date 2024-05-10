@@ -11,8 +11,9 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import at.favre.lib.crypto.bcrypt.BCrypt;
 
-@WebServlet("/emailcheck")
+
 public class AdminEmailCheck extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
@@ -37,14 +38,21 @@ public class AdminEmailCheck extends HttpServlet {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection conn = DriverManager.getConnection(jdbcUrl, dbUsername, dbPassword);
-            PreparedStatement stmt = conn.prepareStatement("SELECT COUNT(*) FROM admin_details WHERE email = ? AND password = ? AND subscription <> 'fourdollars'");
+            PreparedStatement stmt = conn.prepareStatement("SELECT COUNT(*),password FROM admin_details WHERE email = ?  AND subscription <> 'fourdollars'");
 
             stmt.setString(1, email);
-            stmt.setString(2, password);
+            
             ResultSet rs = stmt.executeQuery();
             if (rs.next()) {
                 int count = rs.getInt(1);
-                return count > 0;
+                if(verifyPassword(password,rs.getString("password")) && count > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
             conn.close();
         } catch (ClassNotFoundException | SQLException e) {
@@ -52,5 +60,8 @@ public class AdminEmailCheck extends HttpServlet {
         }
 
         return false;
+    }
+   private boolean verifyPassword(String plainPassword, String hashedPassword) {
+        return BCrypt.verifyer().verify(plainPassword.toCharArray(), hashedPassword).verified;
     }
 }

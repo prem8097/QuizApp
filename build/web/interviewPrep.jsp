@@ -95,7 +95,7 @@
                 </div>
               </div>
     </nav>
-  <!-- Your HTML content for the interview preparation page -->
+  <!-- Your HTML content for the interview preparation page display it here-->
   <div class="container mt-4">
     <!-- Loop through the fetched questions and explanations -->
     <div id="questions">
@@ -125,7 +125,7 @@
    function fetchMoreQuestions()
    {
        // Make an AJAX request to fetch questions based on the query parameters
-    const apiUrl = `http://qmanage.online/questions/random-questions`;
+    const apiUrl = `https://qmanage.online/questions/random-questions`;
     const payload = {
       branchId: params.branchId,
       topicIds: params.selectedTopics.split(','), // Convert comma-separated string back to array
